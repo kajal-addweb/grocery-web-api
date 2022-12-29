@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({
 
 app.use(express.static("/opt/lampp/htdocs/vue/ecommerce_grocerry/grocery_store/Admin_dashboard/server/uploads")); 
 
-app.use('/category', require('./routes/api/routes'));
+app.use('/', require('./routes/api/routes'));
 
 // app.use('/banner', require('./routes/api/bannerroutes'));
 
@@ -49,7 +49,7 @@ mongoose.connect(db, { useNewUrlParser: true
 const banner = require("./routes/api/routes");
 app.use('/api/routes',banner);
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5001;
 
 app.listen(PORT, (err) => {
     if(err) return console.log(err);
