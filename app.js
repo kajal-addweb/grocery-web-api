@@ -6,6 +6,8 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const cors = require('cors');
 // const passport = require('passport');
+
+mongoose.set('strictQuery', false);
 const db = require('./config/keys').mongoURI;
 const app = express();
 
